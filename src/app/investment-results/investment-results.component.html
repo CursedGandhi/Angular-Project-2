@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <td>Year</td>
+        <td>Investment Value</td>
+        <td>Interest(Year)</td>
+        <td>Total Interest</td>
+        <td>Invested Capital</td>
+    </thead>
+    <tbody>
+        @for(row of calculateInvestmentResults; track row)
+        {
+            <tr>
+                <td>{{row.year}}</td>
+                <td>{{row.valueEndOfYear | currency}}</td>
+                <td>{{row.interest | currency}}</td>
+                <td>{{row.totalInterest | currency}}</td>
+                <td>{{row.totalAmountInvested | currency}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

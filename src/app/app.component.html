@@ -1,0 +1,12 @@
+<app-header/>
+
+<main>
+    <app-user-input (submit) = 'onSubmit($event)'/>
+    @if(submit)
+    {
+        <app-investment-results [investment] = 'this.investment'/>
+    }
+    @else {
+    <div class = 'center'>Please Enter some value and press "Calculate"</div>
+    }
+</main>
